@@ -1,0 +1,36 @@
+container {
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.keyBoard {
+    height: 400px;
+    border-radius: 16px;
+}
+
+.whiteKey, .blackKey {
+    border: 2px solid #333845;
+    text-align: center;
+    top: 0px;
+}
+
+.whiteKey {
+    width: 120px;
+}
+
+.blackKey {
+    background-color: aquamarine;
+    width: 80px;
+    height: 50%;
+    z-index: 999;
+    float:left;
+    margin-left: -40px;;
+
+}
+
+
