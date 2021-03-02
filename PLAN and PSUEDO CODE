@@ -1,4 +1,13 @@
 
 
-div.wholeboard-container
-    div.whitekey # C
+if whiteNoteName display = none and bg = white,
+    bg color orange and whitenotename  show and color white.
+
+else if whiteNoteName display show and bg color orange
+    bg color blue
+
+else if white note name display show and bg color blue
+    bg color white and color black
+
+else if white note name color black
+    white note name display: hide
