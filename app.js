@@ -7,6 +7,8 @@ $( document ).ready(function() {
         });
     });
 
+    // because the black keys are technically spans within white keys, this stops the click event from bubbling up to that white key parent
+    
     $("span.blackKey").click(function(e) {
         e.stopPropagation();
         var classes = ['accidental-orange','accidental-blue','blackKey'];
