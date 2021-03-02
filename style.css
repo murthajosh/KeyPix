@@ -1,3 +1,10 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color: #333845;
+}
+
 .container {
     width:100%;
     max-width: 1200px;
@@ -30,7 +37,7 @@
 }
 
 .blackKey {
-    background-color: aquamarine;
+    background-color: #333845;
     width: 80px;
     height: 50%;
     z-index: 999;
@@ -38,12 +45,13 @@
     margin-left: -42px;
     margin-top: -2px;
     border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;;
+    border-bottom-left-radius: 16px;
+    color: white;
 }
 
 
 .whiteNoteName {
-    margin-top: 360px;
+    margin-top: 340px;
 }
 
 .blackNoteName {
@@ -52,5 +60,6 @@
 
 sup {
     vertical-align: super;
+    font-size: 20px;
 }
 
