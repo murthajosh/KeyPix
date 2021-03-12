@@ -9,13 +9,13 @@ $( document ).ready(function() {
 
     // because the black keys are technically spans within white keys, this stops the click event from bubbling up to that white key parent
     
-    $("span.blackKey").click(function(e) {
-        e.stopPropagation();
-        var classes = ['accidental-orange','accidental-blue','blackKey'];
-        $(this).each(function(){
-          this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
-        });
-    });
+    // $("span.blackKey").click(function(e) {
+    //     e.stopPropagation();
+    //     var classes = ['accidental-orange','accidental-blue','blackKey'];
+    //     $(this).each(function(){
+    //       this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+    //     });
+    // });
 
     var ceChunk = `
     <div class="whiteKey C">
@@ -36,7 +36,7 @@ $( document ).ready(function() {
         <p class="whiteNoteName">E</p>
     </div>
     `;
-
+// 
     $("#treble-extend").click(function() {
       $(".keyBoard").append(ceChunk);
     });
@@ -45,6 +45,7 @@ $( document ).ready(function() {
       $(".keyBoard").children().last().remove();
     });
 
+  // These functions change the key color. I had to attach the event to the document first then get more specific because otherwise user couldn't interact with any keys that had been appended *after the page load. This way makes it so even keys appended with 'extend range' can be interacted with.
     jQuery(document).on('click', '.whiteKey,.natural-orange, .natural-blue', function (event) {
       var classes = ['natural-orange','natural-blue','whiteKey'];
       $(this).each(function(){
@@ -52,6 +53,8 @@ $( document ).ready(function() {
       });
     });
 
+
+     // because the black keys are technically spans within white keys, this stops the click event from bubbling up to that white key parent  
     jQuery(document).on('click', '.blackKey, .accidental-orange, .accidental-blue',function (e) {
       e.stopPropagation();
       var classes = ['accidental-orange','accidental-blue','blackKey'];
