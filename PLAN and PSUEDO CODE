@@ -11,3 +11,21 @@ else if white note name display show and bg color blue
 
 else if white note name color black
     white note name display: hide
+
+
+
+RANGE EXTENDER MODULE
+
+Trim or extend in chunks of C-E or F-B so we always keep a white key on the end.
+
+Store those two chunks as template literals.
+
+extend treble : 
+    if last child is b, add C-E chunk
+    if last child is e, add F-b chunk
+
+trim treble :
+remove last child
+
+trim bass :
+remove first child

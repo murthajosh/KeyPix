@@ -140,6 +140,15 @@ sup {
     border-bottom-left-radius: 64px;
 }
 
-
+.controls {
+    align-items: center;
+    justify-content:flex-end;
+}
+.col-3 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.333%;
+    text-align: center;
+}
 
 
