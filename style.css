@@ -8,7 +8,7 @@ body {
 .container {
     width:100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10rem auto;
 }
 
 .row {
@@ -21,6 +21,7 @@ body {
     margin-right: auto;
     height: 400px;
     border-radius: 16px;
+    justify-content: center;
 }
 
 .whiteKey {
@@ -124,6 +125,21 @@ sup {
     background: #326BB1;
     color: #FFFFFF;
 }
+
+.whiteKey:last-child, 
+.natural-orange:last-child,
+.natural-blue:last-child {
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+}
+
+.whiteKey:first-child,
+.natural-orange:first-child,
+.natural-blue:first-child {
+    border-top-left-radius: 64px;
+    border-bottom-left-radius: 64px;
+}
+
 
 
 
