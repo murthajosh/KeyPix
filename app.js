@@ -17,6 +17,7 @@ $( document ).ready(function() {
     //     });
     // });
 
+  
     var ceChunk = `
     <div class="whiteKey C">
         <p class="whiteNoteName">C</p>
@@ -36,13 +37,51 @@ $( document ).ready(function() {
         <p class="whiteNoteName">E</p>
     </div>
     `;
-// 
-    $("#treble-extend").click(function() {
-      $(".keyBoard").append(ceChunk);
+
+    var fbChunk = `
+    <div class="whiteKey F">
+            <p class="whiteNoteName">F</p>
+        </div>
+
+        <div class="whiteKey G">
+            <span class="blackKey Gb">
+                <p class="blackNoteName">G<sup>b</sup></p>
+            </span>
+            <p class="whiteNoteName">G</p>
+        </div>
+
+        <div class="whiteKey A">
+            <span class="blackKey Ab">
+                <p class="blackNoteName">A<sup>b</sup></p>
+            </span>
+            <p class="whiteNoteName">A</p>
+        </div>
+
+        <div class="whiteKey B">
+            <span class="blackKey Bb">
+                <p class="blackNoteName">B<sup>b</sup></p>
+            </span>
+            <p class="whiteNoteName">B</p>
+        </div>
+    `;
+// These change the range on the treble side
+    $("#treble-extend").click(function() {      
+         $(".keyBoard").append(ceChunk);
     });
 
     $("#treble-trim").click(function() {
       $(".keyBoard").children().last().remove();
+    });
+
+
+// These change the range on the bass side
+    $("#bass-extend").click(function() {      
+      $(".keyBoard").prepend(fbChunk);
+    });
+
+    $("#bass-trim").click(function() {
+    $(".keyBoard").children().first().remove();
+    // $( ".blackKey:first-child" ).remove();
     });
 
   // These functions change the key color. I had to attach the event to the document first then get more specific because otherwise user couldn't interact with any keys that had been appended *after the page load. This way makes it so even keys appended with 'extend range' can be interacted with.
