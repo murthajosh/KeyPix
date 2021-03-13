@@ -81,7 +81,7 @@ $( document ).ready(function() {
 
     $("#bass-trim").click(function() {
     $(".keyBoard").children().first().remove();
-    // $( ".blackKey:first-child" ).remove();
+    $(".keyBoard").children().first().blackKey.remove();
     });
 
   // These functions change the key color. I had to attach the event to the document first then get more specific because otherwise user couldn't interact with any keys that had been appended *after the page load. This way makes it so even keys appended with 'extend range' can be interacted with.
