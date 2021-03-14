@@ -25,14 +25,14 @@ $( document ).ready(function() {
 
     <div class="whiteKey D">
         <span class="blackKey Db">
-            <p class="blackNoteName">D<sup>b</sup></p>
+            <p class="blackNoteName cD">D<sup>b</sup></p>
         </span>
         <p class="whiteNoteName">D</p>
     </div>
 
     <div class="whiteKey E">
         <span class="blackKey Eb">
-            <p class="blackNoteName">E<sup>b</sup></p>
+            <p class="blackNoteName dE">E<sup>b</sup></p>
         </span>
         <p class="whiteNoteName">E</p>
     </div>
@@ -45,21 +45,21 @@ $( document ).ready(function() {
 
         <div class="whiteKey G">
             <span class="blackKey Gb">
-                <p class="blackNoteName">G<sup>b</sup></p>
+                <p class="blackNoteName fG">G<sup>b</sup></p>
             </span>
             <p class="whiteNoteName">G</p>
         </div>
 
         <div class="whiteKey A">
             <span class="blackKey Ab">
-                <p class="blackNoteName">A<sup>b</sup></p>
+                <p class="blackNoteName gA">A<sup>b</sup></p>
             </span>
             <p class="whiteNoteName">A</p>
         </div>
 
         <div class="whiteKey B">
             <span class="blackKey Bb">
-                <p class="blackNoteName">B<sup>b</sup></p>
+                <p class="blackNoteName aB">B<sup>b</sup></p>
             </span>
             <p class="whiteNoteName">B</p>
         </div>
@@ -107,11 +107,11 @@ $( document ).ready(function() {
         if(this.checked) {
 
             
-            $("#cD").html("C<sup>#</sup>");
-            $("#dE").html("D<sup>#</sup>");
-            $("#fG").html("F<sup>#</sup>");
-            $("#gA").html("G<sup>#</sup>");
-            $("#aB").html("A<sup>#</sup>");
+            $(".cD").html("C<sup>#</sup>");
+            $(".dE").html("D<sup>#</sup>");
+            $(".fG").html("F<sup>#</sup>");
+            $(".gA").html("G<sup>#</sup>");
+            $(".aB").html("A<sup>#</sup>");
 
             
 
@@ -119,11 +119,11 @@ $( document ).ready(function() {
 
         } else {
             // $("sup").text("b"); 
-            $("#cD").html("D<sup>b</sup>");
-            $("#dE").html("E<sup>b</sup>");
-            $("#fG").html("G<sup>b</sup>");
-            $("#gA").html("A<sup>b</sup>");
-            $("#aB").html("B<sup>b</sup>");
+            $(".cD").html("D<sup>b</sup>");
+            $(".dE").html("E<sup>b</sup>");
+            $(".fG").html("G<sup>b</sup>");
+            $(".gA").html("A<sup>b</sup>");
+            $(".aB").html("B<sup>b</sup>");
         }
     });
   
