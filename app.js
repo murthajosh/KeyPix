@@ -79,10 +79,10 @@ $( document ).ready(function() {
       $(".keyBoard").prepend(fbChunk);
     });
 
-    $("#bass-trim").click(function() {
-    $(".keyBoard").children().first().remove();
-    $(".keyBoard").children().first().blackKey.remove();
-    });
+// Removing the trim bass function. It leaves the black key overhang. It's also unncessary.
+    // $("#bass-trim").click(function() {
+    // $(".keyBoard").children().first().remove();
+    // });
 
   // These functions change the key color. I had to attach the event to the document first then get more specific because otherwise user couldn't interact with any keys that had been appended *after the page load. This way makes it so even keys appended with 'extend range' can be interacted with.
     jQuery(document).on('click', '.whiteKey,.natural-orange, .natural-blue', function (event) {
@@ -100,6 +100,31 @@ $( document ).ready(function() {
       $(this).each(function(){
         this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
       });
-  });
+    });
 
+
+    $("#accidental-toggle").change(function() {
+        if(this.checked) {
+
+            
+            $("#cD").html("C<sup>#</sup>");
+            $("#dE").html("D<sup>#</sup>");
+            $("#fG").html("F<sup>#</sup>");
+            $("#gA").html("G<sup>#</sup>");
+            $("#aB").html("A<sup>#</sup>");
+
+            
+
+
+
+        } else {
+            // $("sup").text("b"); 
+            $("#cD").html("D<sup>b</sup>");
+            $("#dE").html("E<sup>b</sup>");
+            $("#fG").html("G<sup>b</sup>");
+            $("#gA").html("A<sup>b</sup>");
+            $("#aB").html("B<sup>b</sup>");
+        }
+    });
+  
 });
