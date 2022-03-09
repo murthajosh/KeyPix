@@ -18,14 +18,16 @@
 
     <!-- app -->
     <script src="app.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js" integrity="sha512-UNbeFrHORGTzMn3HTt00fvdojBYHLPxJbLChmtoyDwB6P9hX5mah3kMKm0HHNx/EvSPJt14b+SlD8xhuZ4w9Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <title>Asset Creator</title>
 </head>
 
 <body>
 
 <div class="container">
-    <div class="row keyBoard">
+    <div id="keyboard" class="row keyBoard">
         <div id="C" class="whiteKey C">
             <p class="whiteNoteName">C</p>
         </div>
@@ -87,6 +89,7 @@
             <button class="range-control" id="treble-trim">Trim Range</button>
             <button class="range-control" id="treble-extend">Extend Range</button>
         </div>
+        <button id="save" class="save-button">Save Graphic</button>
     </div>
 </div>
 </body>

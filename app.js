@@ -139,5 +139,12 @@ $("#bass-trim").click(function() {
             $(".aB").html("B<sup>b</sup>");
         }
     });
-  
+
+    $("#save").click(function() {
+        domtoimage.toBlob(document.getElementById('keyboard'))
+    .then(function (blob) {
+        window.saveAs(blob, 'keys-graphic.png');
+    });
+        });
+
 });
