@@ -1,5 +1,5 @@
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bolder;
     font-size: 40px;
     color: #FFFFFF;
@@ -30,8 +30,7 @@ body {
     justify-items: last baseline;
     top: 0px;
     width: 120px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 0 0 16px 16px;
     background: #ffffff;
 }
 
@@ -46,8 +45,7 @@ body {
     float:left;
     margin-left: -42px;
     margin-top: -2px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 4px 4px 16px 16px;
     background: #333845;
     color: #333845;
 }
@@ -72,8 +70,7 @@ sup {
     justify-items: last baseline;
     top: 0px;
     width: 120px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 0 0 16px 16px;
     background: #FDA93D;
     color: white;
 
@@ -85,8 +82,7 @@ sup {
     justify-items: last baseline;
     top: 0px;
     width: 120px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 0 0 16px 16px;
     background: #7DA5CE;
     color: white;
 }
@@ -103,8 +99,7 @@ sup {
     float:left;
     margin-left: -42px;
     margin-top: -2px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 4px 4px 16px 16px;
     background: #FC7436;
     color: #FFFFFF;
 
@@ -120,8 +115,7 @@ sup {
     float:left;
     margin-left: -42px;
     margin-top: -2px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 4px 4px 16px 16px;
     background: #326BB1;
     color: #FFFFFF;
 }
@@ -129,15 +123,15 @@ sup {
 .whiteKey:last-child, 
 .natural-orange:last-child,
 .natural-blue:last-child {
-    border-top-right-radius: 64px;
-    border-bottom-right-radius: 64px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
 }
 
 .whiteKey:first-child,
 .natural-orange:first-child,
 .natural-blue:first-child {
-    border-top-left-radius: 64px;
-    border-bottom-left-radius: 64px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
 }
 
 .controls {
@@ -195,7 +189,7 @@ sup {
     left: 0;
     right: 0;
     bottom: -4px;
-    background-color: #80E5E5;
+    background-color: #c4c4c4;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -213,11 +207,11 @@ sup {
   }
   
   input:checked + .slider {
-    background-color: #80E5E5;
+    background-color: #c4c4c4;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #80E5E5;
+    box-shadow: 0 0 1px #c4c4c4;
   }
   
   input:checked + .slider:before {

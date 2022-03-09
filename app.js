@@ -72,15 +72,36 @@ $( document ).ready(function() {
         }
     });
 
-// trim down the range by a step (to the nearest white key)
+// Trim down the range ont he treble side by a step (to the nearest white key)
     $("#treble-trim").click(function() {
       $(".keyBoard").children().last().remove();
     });
 
 
-// This will extend the bass side down to an F
+// Extend the range on the bass side
     $("#bass-extend").click(function() {      
-      $(".keyBoard").prepend(fbChunk);
+        if ($(".keyBoard > div:first-child").is("#C")) {
+            $(".keyBoard").prepend(noteB);
+        } else if ($(".keyBoard > div:first-child").is("#B")) {
+            $(".keyBoard").prepend(noteA);
+        } else if ($(".keyBoard > div:first-child").is("#A")) {
+            $(".keyBoard").prepend(noteG);
+        } else if ($(".keyBoard > div:first-child").is("#G")) {
+            $(".keyBoard").prepend(noteF);
+        } else if ($(".keyBoard > div:first-child").is("#F")) {
+            $(".keyBoard").prepend(noteE);
+        } else if ($(".keyBoard > div:first-child").is("#E")) {
+            $(".keyBoard").prepend(noteD);
+        } else if ($(".keyBoard > div:first-child").is("#D")) {
+            $(".keyBoard").prepend(noteC);
+        } else {
+            console.log('fuck you')
+        }
+    });
+
+// Trim down the range on the bass side
+$("#bass-trim").click(function() {
+    $(".keyBoard").children().first().remove();
     });
 
 
