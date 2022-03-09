@@ -1,55 +1,75 @@
 $( document ).ready(function() {
 
-    var ceChunk = `
-    <div class="whiteKey C">
+    const noteC = `
+    <div id="C" class="whiteKey C">
         <p class="whiteNoteName">C</p>
-    </div>
+    </div>`;
 
-    <div class="whiteKey D">
+    const noteD = `
+    <div id="D" class="whiteKey D">
         <span class="blackKey Db">
             <p class="blackNoteName cD">D<sup>b</sup></p>
         </span>
         <p class="whiteNoteName">D</p>
-    </div>
+    </div> `;
 
-    <div class="whiteKey E">
+    const noteE = `
+    <div id="E" class="whiteKey E">
         <span class="blackKey Eb">
             <p class="blackNoteName dE">E<sup>b</sup></p>
         </span>
         <p class="whiteNoteName">E</p>
+    </div>`;
+
+    const noteF = `
+    <div id="F" class="whiteKey F">
+        <p class="whiteNoteName">F</p>
+    </div>`;
+
+    const noteG = `
+    <div id="G" class="whiteKey G">
+        <span class="blackKey Gb">
+            <p class="blackNoteName fG">G<sup>b</sup></p>
+        </span>
+        <p class="whiteNoteName">G</p>
+    </div>`;
+
+    const noteA = `
+    <div id="A" class="whiteKey A">
+        <span class="blackKey Ab">
+            <p class="blackNoteName gA">A<sup>b</sup></p>
+        </span>
+        <p class="whiteNoteName">A</p>
+    </div>`;
+
+    const noteB = `
+    <div id="B" class="whiteKey B">
+        <span class="blackKey Bb">
+            <p class="blackNoteName aB">B<sup>b</sup></p>
+        </span>
+        <p class="whiteNoteName">B</p>
     </div>
     `;
 
-    var fbChunk = `
-    <div class="whiteKey F">
-            <p class="whiteNoteName">F</p>
-        </div>
-
-        <div class="whiteKey G">
-            <span class="blackKey Gb">
-                <p class="blackNoteName fG">G<sup>b</sup></p>
-            </span>
-            <p class="whiteNoteName">G</p>
-        </div>
-
-        <div class="whiteKey A">
-            <span class="blackKey Ab">
-                <p class="blackNoteName gA">A<sup>b</sup></p>
-            </span>
-            <p class="whiteNoteName">A</p>
-        </div>
-
-        <div class="whiteKey B">
-            <span class="blackKey Bb">
-                <p class="blackNoteName aB">B<sup>b</sup></p>
-            </span>
-            <p class="whiteNoteName">B</p>
-        </div>
-    `;
-
 // Extend the range on the treble side
-    $("#treble-extend").click(function() {      
-         $(".keyBoard").append(ceChunk);
+    $("#treble-extend").click(function() { 
+        if ($(".keyBoard > div:last-child").is("#B")) {
+            $(".keyBoard").append(noteC);
+        } else if ($(".keyBoard > div:last-child").is("#C")) {
+            $(".keyBoard").append(noteD);
+        } else if ($(".keyBoard > div:last-child").is("#D")) {
+            $(".keyBoard").append(noteE);
+        } else if ($(".keyBoard > div:last-child").is("#E")) {
+            $(".keyBoard").append(noteF);
+        } else if ($(".keyBoard > div:last-child").is("#F")) {
+            $(".keyBoard").append(noteG);
+        } else if ($(".keyBoard > div:last-child").is("#G")) {
+            $(".keyBoard").append(noteA);
+        } else if ($(".keyBoard > div:last-child").is("#A")) {
+            $(".keyBoard").append(noteB);
+        } else {
+            console.log('fuck you')
+        }
     });
 
 // trim down the range by a step (to the nearest white key)
